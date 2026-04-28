@@ -24,8 +24,11 @@ const cards = [
   },
 ]
 
+const isMobile = () =>
+  typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
+
 function Card({ title, text }) {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(() => isMobile())
 
   return (
     <div className="card">

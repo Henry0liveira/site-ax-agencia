@@ -21,6 +21,30 @@
   }
 }
 
+@media (max-width: 768px) {
+  .card {
+    overflow: visible;
+    min-height: unset;
+  }
+
+  .card-text--expanded {
+    position: static;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    font-size: 1em;
+    color: var(--text);
+    display: block;
+    text-align: left;
+    animation: none;
+
+    &:hover {
+      color: var(--accent);
+      opacity: 1;
+    }
+  }
+}
+
 .card {
   position: relative;
   border: 1px solid var(--border);
